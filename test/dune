@@ -1,0 +1,19 @@
+(library
+ (name text_debugger_test)
+ (libraries alcotest text-debugger)
+ (modules
+  (:standard \ test_runner))
+ (flags (:standard -linkall -g -open StdLabels)))
+
+(executable
+ (name test_runner)
+ (libraries alcotest text_debugger_test)
+ (modules test_runner)
+ (flags (:standard -open StdLabels)))
+
+(rule
+ (alias runtest)
+ (action
+  (run ./test_runner.exe -q --color=always)))
+
+(include_subdirs unqualified)

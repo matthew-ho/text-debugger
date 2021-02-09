@@ -1,0 +1,7 @@
+(executable
+ (name main)
+ (public_name text-debugger)
+ (libraries text-debugger)
+ (flags (:standard -open StdLabels)))
+
+(include_subdirs unqualified)
