@@ -1,10 +1,7 @@
 type t = {
-  t : string [@key "type"];
-  name : string;
   request : string;
   program : string;
   stopOnEntry : (bool [@default false]);
-  __sessionId: string
 }
 [@@deriving yojson]
 

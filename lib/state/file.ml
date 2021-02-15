@@ -11,4 +11,6 @@ let open_file file_path =
   let f = open_in file_path in
     file := Array.of_list (build_list [] f)
 
-let has_ended = !current_line >= (Array.length !file)
+let has_ended () = !current_line >= (Array.length !file)
+
+let next_line () = current_line := !current_line + 1
