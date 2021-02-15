@@ -1,4 +1,4 @@
 type t = {
-  t : string [@key "type"]
+  command : string
 }
 [@@deriving yojson]
