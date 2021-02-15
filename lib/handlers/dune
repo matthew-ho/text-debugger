@@ -1,0 +1,6 @@
+(library
+ (name messageHandler)
+ (public_name text-debugger.messageHandler)
+ (libraries message state utils ppx_deriving_yojson.runtime)
+ (preprocess (pps ppx_deriving_yojson))
+ (flags -open Utils))
