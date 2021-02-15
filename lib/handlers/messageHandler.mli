@@ -1,1 +1,1 @@
-val handle : Message.t -> unit
+val handle : Protocol.Message.t -> unit
