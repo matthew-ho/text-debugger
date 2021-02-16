@@ -1,6 +1,6 @@
 (library
  (name text_debugger)
  (public_name text-debugger)
- (flags (:standard -open StdLabels)))
-
-(include_subdirs unqualified)
+ (libraries protocol messageHandler utils ppx_deriving_yojson.runtime)
+ (preprocess (pps ppx_deriving_yojson))
+ (flags -open Utils))

@@ -1,0 +1,8 @@
+(include_subdirs unqualified)
+
+(library
+ (name protocol)
+ (public_name text-debugger.protocol)
+ (libraries utils ppx_deriving_yojson.runtime)
+ (preprocess (pps ppx_deriving_yojson))
+ (flags -open Utils))
